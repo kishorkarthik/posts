@@ -34,8 +34,6 @@ That brings us to **training**.
 
 Before a model can infer a single token, it has to learn the statistical patterns in its training data. There are two main stages of building an LLM: **pre-training** and **post-training**.
 
-## Pre-training
-
 During pre-training, vast swaths of internet text and other data are processed and compressed into a neural network's weights, creating something like a probabilistic, lossy zip file of internet knowledge.
 
 Because storing the raw internet directly inside a model is not how this works, the model instead learns statistical relationships, patterns, and representations from its training data, which allow it to predict the next token.
@@ -45,8 +43,6 @@ To digest all this data efficiently, the training set is split into smaller chun
 Repeating this loop across millions of iterations and multiple full passes over the entire dataset, gradually refines these weights. The result is a pretrained model that has learned an enormous range of statistical patterns, but isn't necessarily a helpful assistant yet.
 
 Pre-training is computationally expensive, can take months, and requires significant resources. The model's training data also determines its **knowledge cutoff**: the point beyond which it generally doesn't have reliable built-in knowledge of events. This doesn't mean it cannot access newer information; it means it needs additional context or external tools, such as web search, to do so.
-
-## Post-training
 
 Post-training (or fine-tuning) is what turns that raw text engine into a helpful tool.
 
